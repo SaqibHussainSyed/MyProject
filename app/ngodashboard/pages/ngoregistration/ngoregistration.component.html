@@ -1,0 +1,28 @@
+<div class="signup-form">
+    <form [formGroup]="ngoregister" (ngSubmit)="addNgo()" >
+		<h2>Ngo Register</h2><br>
+
+        <div class="form-group"> <label for="user" class="label">Ngo Id</label> <input type="number" class="form-control" name="ngoId" formControlName="ngoId" placeholder="Please Enter your Ngo id " required="required"> </div>
+        <div class="form-group"> <label for="user" class="label">Ngo Name</label> <input type="text" class="form-control" name="ngoName" formControlName="ngoName" placeholder="Please Enter your Ngo Name " required="required"> </div>
+        <div class="form-group"> <label for="user" class="label">Ngo Location</label> <input type="text" class="form-control" name="ngoLocation" formControlName="ngoLocation" placeholder="Please Enter your Ngo Location " required="required"> </div>
+        <div class="form-group"> <label for="user" class="label">Course Capacity</label> <input type="number" class="form-control" name="capacity" formControlName="capacity" placeholder="Please Enter  Course Capacity " required="required"> </div>
+        <label class="label">Select Course</label>
+        <div class="form-group">
+            <select formControlName="courseId"  class="mdb-select md-form form-control"  >
+             
+                <option value="" disabled selected>Select course...</option>
+              <option *ngFor="let course of courses| keyvalue" [value]=course.key>{{course.value}}</option>
+            </select>
+          </div>
+        <div class="form-group"> <label for="user" class="label" >Start Date</label> <input type="date" class="form-control" name="startDate" formControlName="startDate" placeholder="Please Enter startDate "  required="required"> </div><br>
+
+        
+       <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block" >Register Now</button>
+          </div>
+           <div aligin='center'><span>  &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;{{msg}}</span></div>
+       
+   
+        </form>
+
+</div>

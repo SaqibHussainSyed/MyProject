@@ -1,0 +1,44 @@
+
+
+<div>
+    <h4>User List</h4>
+    <table>
+        <tr>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Ngo Id</th>
+            <th>Marital Status</th>
+            <th>Aadhar Number</th>
+            <th>Step Status</th>
+            <th>User Age</th>
+            <th>No. of Children</th>
+            <th>Physically Challenged</th>
+            <th>Age of Child</th>
+           
+        </tr>
+       
+        
+        
+        
+        <tr [attr.id]="step.registrationId" *ngFor='let step of steps'>
+            <td>{{step.registrationId}}</td>
+            <td>{{step.userName}}</td>
+            <td>{{step.ngoId}}</td>
+            <td>{{step.maritalStatus}}</td>
+            <td>{{step.aadharNo}}</td>
+            <td>{{step.stepStatus}}</td>
+            <td>{{step.userAge}}</td>
+            <td>{{step.noOfChildren}}</td>
+            <td>{{step.physicallyChallenged}}</td>
+            <td>{{step.ageOfChildren}}</td>
+
+            <td> <button class="btn"  (click)="approveNgo(step)" style="margin-left: 20px;">Approve</button></td>
+            <td><button class="btn"  (click)="rejectNgo(step)" style="margin-left: 20px;"> Reject</button></td>
+
+     
+        </tr>
+    
+
+    </table>
+
+</div>

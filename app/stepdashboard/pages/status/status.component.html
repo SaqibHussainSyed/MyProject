@@ -1,0 +1,23 @@
+<div *ngIf="!label ; else status">
+  
+<div class="signup-form">
+
+    <form [formGroup]="aadharDetail" (ngSubmit)="saveAadhar()">
+    <div class="form-group">
+        <label class="label">Aadhar No</label>	<input type="text" formControlName="aadharNo" class="form-control" name="aadhaarNo" placeholder="Please Enter Aadhar no" required="required">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+    </div>
+</form>
+
+</div>
+</div>
+<ng-template #status>
+    <div class="status">
+            
+        <h3>{{msg}}</h3>
+
+
+</div>
+</ng-template>

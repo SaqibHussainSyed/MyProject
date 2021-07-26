@@ -1,0 +1,30 @@
+#about-container {
+    width: 100%;
+    /* background: url('')no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(54, 50, 50);
+    font-weight: bolder;
+}
+
+.card-body p {
+    line-height: 1.5em;
+    text-align: justify;
+    color:	rgb(128,128,128);
+    
+}
+
+.card-body,.card-header{
+    color:rgb(255,105,180);
+
+}
+.content h3{
+    color:rgb(255,105,180);
+}
+
+.content p {
+    line-height: 1.5em;
+    color: 	rgb(128,128,128);
+}

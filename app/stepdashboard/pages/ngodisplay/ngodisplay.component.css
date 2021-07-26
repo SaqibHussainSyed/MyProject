@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd) {background-color: #f2f2f2;}
+  
+  hr{
+    border: 0.5px solid rgb(169,169,169);
+  }
+
+  h4{
+      font-weight: bold;
+      color: rgb(255,105,180);
+      text-align: center;
+  }

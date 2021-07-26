@@ -1,0 +1,56 @@
+<h2 class="h2-responsive text-center p-3 text-dark">NGOs</h2><br><br>
+<h4 class="text-md-center">Agriculture</h4>
+<table>
+    <tr>
+      <th>Ngo Name</th>
+      <th>Location</th>
+      <th>Course Capacity</th>
+      <th>Course Start Date</th>
+    </tr>
+    <tr *ngFor="let ngo of ngoAgriculture">
+     
+    <td>{{ngo.ngoName}}</td>
+    <td>{{ngo.ngoLocation}}</td>
+    <td>{{ngo.capacity}}</td>
+    <td>{{ngo.startDate}}</td>
+    </tr>
+  </table>
+
+  <hr>
+  <br>
+  <h4 class="text-md-center">Stitching</h4>
+  <table>
+    <tr>
+      <th>Ngo Name</th>
+      <th>Location</th>
+      <th>Course Capacity</th>
+      <th>Course Start Date</th>
+    </tr>
+    <tr *ngFor="let ngo of ngoStitching">
+     
+    <td>{{ngo.ngoName}}</td>
+    <td>{{ngo.ngoLocation}}</td>
+    <td>{{ngo.capacity}}</td>
+    <td>{{ngo.startDate}}</td>
+    </tr>
+  </table>
+<hr>
+<br>
+<h4 class="text-md-center">Tailoring</h4>
+  <table>
+    <tr>
+      <th>Ngo Name</th>
+      <th>Location</th>
+      <th>Course Capacity</th>
+      <th>Course Start Date</th>
+    </tr>
+    <tr *ngFor="let ngo of ngoTailoring">
+     
+    <td>{{ngo.ngoName}}</td>
+    <td>{{ngo.ngoLocation}}</td>
+    <td>{{ngo.capacity}}</td>
+    <td>{{ngo.startDate}}</td>
+    </tr>
+  </table>
+
+  

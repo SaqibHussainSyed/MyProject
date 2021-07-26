@@ -1,0 +1,30 @@
+
+
+<div>
+    <h4>Ngo List</h4>
+    <table>
+        <tr>
+            <th>Ngo Id</th>
+            <th>Ngo Name</th>
+            <th>Ngo Location</th>
+            <th>Start Date</th>
+            <th>Capacity</th>
+            <th>Course Id</th>
+           
+        </tr>
+        <tr [attr.id]="ngo.ngoId" *ngFor='let ngo of ngos'>
+            <td>{{ngo.ngoId}}</td>
+            <td>{{ngo.ngoName}}</td>
+            <td>{{ngo.ngoLocation}}</td>
+            <td>{{ngo.startDate}}</td>
+            <td>{{ngo.capacity}}</td>
+            <td>{{ngo.courseId}}</td>
+
+            <td> <button class="btn"  (click)="approveNgo(ngo)" style="margin-left: 20px;">Approve</button></td>
+            <td><button class="btn"  (click)="rejectNgo(ngo)" style="margin-left: 20px;"> Reject</button></td>
+
+        </tr>
+
+    </table>
+
+</div>

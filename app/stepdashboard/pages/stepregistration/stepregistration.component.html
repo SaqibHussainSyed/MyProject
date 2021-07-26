@@ -1,0 +1,81 @@
+<div class="signup-form">
+    <form [formGroup]="stepregister" (ngSubmit)="addStepUser()" >
+		<h2>Step Register</h2><br>
+
+        <div class="form-group"> <label for="user" class="label">Full Name <span style="color: red;">*{{fnerror}}</span></label> <input type="text" class="form-control" name="userName" formControlName="userName" placeholder="Please Enter your name " required></div>
+        <div class="row">&nbsp;
+            <label class="label">Marital Status :</label>
+            &nbsp;  &nbsp;
+              <label class="md-check label">
+                <input type="radio" value="Single" name="maritalStatus" formControlName="maritalStatus">
+                Single
+              </label>
+              &nbsp; &nbsp;
+              <label class="md-check label">
+                <input type="radio" value="Married" name="maritalStatus" formControlName="maritalStatus">     
+                Married
+              </label>
+              &nbsp; &nbsp;
+              <label class="md-check label">
+                <input type="radio" value="Widow" name="maritalStatus" formControlName="maritalStatus">     
+                Widow
+              </label>
+            
+            </div><br>
+    
+        <div class="form-group">
+            <label for="user" class="label">Aadhar No</label>	<input type="text" formControlName="aadharNo" class="form-control" name="aadhaarNo" placeholder="Please Enter Aadhar no" required="required">
+        </div>
+		<div class="form-group">
+            <label for="user" class="label">Age</label> <input type="number" formControlName="userAge" class="form-control" name="userAge" placeholder="Please Enter your age" required="required">
+        </div>
+		<div class="form-group">
+            <label for="user" class="label">No of Children </label>  <input type="number" formControlName="noOfChildren" class="form-control" name="noOfChildren" placeholder="Please Enter no of children" required="required">
+        </div>        
+        <!-- <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+        </div> -->
+        <div class="form-group">
+            <label for="user" class="label">Age of Children </label>  <input type="number" formControlName="ageOfChildren" class="form-control" name="ageOfChildren" placeholder="Please Enter age of eldest child" required="required">
+        </div> 
+        <div class="row">&nbsp; &nbsp;
+        <label class="label">Physically Challenged :</label>
+       
+       
+        &nbsp;  &nbsp;
+          <label class="md-check label">
+            <input type="radio" value="yes" name="physicallyChallenged" formControlName="physicallyChallenged">
+                    Yes
+          </label>
+          &nbsp; &nbsp;
+          <label class="md-check label">
+            <input type="radio" value="no" name="physicallyChallenged" formControlName="physicallyChallenged">     
+           No
+          </label>
+        
+        </div>
+        <br>
+        <label class="label">Select Course</label>
+        <div class="form-group">
+            <select formControlName="courseName"  class="mdb-select md-form form-control"  (change)="onSelectCourse($event.target.value)" >
+             
+                <option value="" disabled selected>Select course...</option>
+              <option *ngFor="let course of courses" [value]="course">{{course}}</option>
+            </select>
+          </div>
+          <label class="label">Select Ngo</label>
+          <div class="form-group">
+            <select formControlName="ngoId"  class="form-control mdb-select md-form" >
+              <option  value=""  disabled selected>Select Ngo...</option>
+              <option *ngFor="let ngo of ngos" [value]="ngo.ngoId">{{ngo.ngoName}}</option>
+            </select>
+          </div>
+          <br>
+          
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block" >Register Now</button>
+          </div>
+           <div aligin='center'><span> &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;{{msg}}</span></div>
+        </form>
+
+</div>
